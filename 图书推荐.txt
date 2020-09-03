@@ -1,0 +1,19 @@
+部部都是经典：
+0. 《Inside Windows Debugging（英文）》
+1. [软件调试] 张银奎
+2. 软件调试补篇软件调试纵横谈(视频)
+3. 格蠹汇编 -软件调试案例集锦
+4. Windows.用户态程序高效排错
+5. Windows高级调试（Advanced Windows Debugging）
+6. Troubleshooting with the Windows Sys internals Tools《
+7. Debugging Applications for Microsoft dotNET and Microsoft Windows》
+8. 还有一本巨著：    Memory.Dump.Analysis.Anthology,.Volume.1
+    Memory.Dump.Analysis.Anthology,.Volume.2
+    Memory.Dump.Analysis.Anthology,.Volume.3
+    Memory.Dump.Analysis.Anthology,.Volume.4
+    Memory.Dump.Analysis.Anthology,.Volume.5
+    Memory.Dump.Analysis.Anthology,.Volume.6
+    Memory.Dump.Analysis.Anthology,.Volume.7
+    Memory.Dump.Analysis.Anthology,.Volume.8
+    Memory.Dump.Analysis.Anthology,.Volume.9
+    Memory.Dump.Analysis.Anthology,.Volume.10
