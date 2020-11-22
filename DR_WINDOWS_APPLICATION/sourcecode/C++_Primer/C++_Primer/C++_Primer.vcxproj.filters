@@ -13,10 +13,22 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="C++ elementary knowledge">
+      <UniqueIdentifier>{c4441423-2651-4896-a647-fa93eb20c412}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDef.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
+    <ClInclude Include="integral_type.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
+    <ClInclude Include="variable.h">
+      <Filter>C++ elementary knowledge</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -44,6 +44,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -151,7 +152,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CommonDef.h" />
+    <ClInclude Include="integral_type.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="variable.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++_Primer.cpp" />
