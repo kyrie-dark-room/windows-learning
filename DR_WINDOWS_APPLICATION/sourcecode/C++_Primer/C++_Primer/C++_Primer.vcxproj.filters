@@ -30,6 +30,15 @@
     <ClInclude Include="variable.h">
       <Filter>C++ elementary knowledge</Filter>
     </ClInclude>
+    <ClInclude Include="C++_KeyWord.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
+    <ClInclude Include="initialize_by_type.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
+    <ClInclude Include="C++_std.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
