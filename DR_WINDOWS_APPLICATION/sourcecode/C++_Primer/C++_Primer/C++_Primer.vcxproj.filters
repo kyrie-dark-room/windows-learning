@@ -39,6 +39,15 @@
     <ClInclude Include="C++_std.h">
       <Filter>C++ elementary knowledge</Filter>
     </ClInclude>
+    <ClInclude Include="Cast.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
+    <ClInclude Include="operator_precedence.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
+    <ClInclude Include="C++_Exception.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
