@@ -157,6 +157,7 @@
     <ClInclude Include="C++_std.h" />
     <ClInclude Include="Cast.h" />
     <ClInclude Include="CommonDef.h" />
+    <ClInclude Include="Function.h" />
     <ClInclude Include="initialize_by_type.h" />
     <ClInclude Include="integral_type.h" />
     <ClInclude Include="operator_precedence.h" />

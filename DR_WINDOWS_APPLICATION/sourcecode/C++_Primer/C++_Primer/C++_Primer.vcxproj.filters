@@ -48,6 +48,9 @@
     <ClInclude Include="C++_Exception.h">
       <Filter>C++ elementary knowledge</Filter>
     </ClInclude>
+    <ClInclude Include="Function.h">
+      <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
