@@ -16,6 +16,15 @@
     <Filter Include="C++ elementary knowledge">
       <UniqueIdentifier>{c4441423-2651-4896-a647-fa93eb20c412}</UniqueIdentifier>
     </Filter>
+    <Filter Include="C++ Standard Library">
+      <UniqueIdentifier>{420a845f-561f-4df9-804d-bdbdec4863c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C++ Standard Library\IO Library">
+      <UniqueIdentifier>{3def228c-e4fb-47cb-a9b4-a26bb460091a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C++ Standard Library\STL">
+      <UniqueIdentifier>{6ebe955c-8bb0-43bb-82c9-ecf1a63125de}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -53,6 +62,12 @@
     </ClInclude>
     <ClInclude Include="Class.h">
       <Filter>C++ elementary knowledge</Filter>
+    </ClInclude>
+    <ClInclude Include="IO_Class.h">
+      <Filter>C++ Standard Library\IO Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequential_Container.h">
+      <Filter>C++ Standard Library\STL</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
