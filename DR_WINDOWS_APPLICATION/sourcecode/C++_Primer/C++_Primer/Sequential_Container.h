@@ -123,4 +123,172 @@ c.insert(p, il)			ilÊÇÒ»¸ö»¨À¨ºÅ°üÎ§µÄÔªËØÖµÁÐ±í¡£½«ÕâÐ©¸ø¶¨Öµ²åÈëµ½µü´úÆ÷pÖ¸Ïòµ
 11. µ±µ÷ÓÃpush»òinsert³ÉÔ±º¯ÊýÊ±£¬ÎÒÃÇ½«ÔªËØÀàÐÍµÄ¶ÔÏó´«µÝ¸øËüÃÇ£¬ÕâÐ©¶ÔÏó±»¿½±´µ½ÈÝÆ÷ÖÐ¡£¶øµ±ÎÒÃÇµ÷ÓÃ
 Ò»¸öemplace³ÉÔ±º¯ÊýÊ±£¬ÔòÊÇ½«²ÎÊý´«µÝ¸øÔªËØÀàÐÍµÄ¹¹Ôìº¯Êý¡£emplace³ÉÔ±Ê¹ÓÃÕâÐ©²ÎÊýÔÚÈÝÆ÷¹ÜÀíµÄÄÚ´æ¿Õ¼ä
 ÖÐÖ±½Ó¹¹ÔìÔªËØ¡£
+
+12. ÔÚË³ÐòÈÝÆ÷ÖÐ·ÃÎÊÔªËØµÄ²Ù×÷
+	atºÍÏÂ±ê²Ù×÷Ö»ÊÊÓÃÓÚstring¡¢vector¡¢dequeºÍarray¡£
+	back²»ÊÊÓÃÓÚforward_list¡£
+	c.back()		·µ»ØcÖÐÎ²ÔªËØµÄÒýÓÃ¡£ÈôcÎª¿Õ£¬º¯ÊýÐÐÎªÎ´¶¨Òå
+	c.front()		·µ»ØcÖÐÊ×ÔªËØµÄÒýÓÃ¡£ÈôcÎª¿Õ£¬º¯ÊýÐÐÎªÎ´¶¨Òå
+	c[n]			·µ»ØcÖÐÏÂ±êÎªnµÄÔªËØµÄÒýÓÃ£¬nÊÇÒ»¸öÎÞ·ûºÅÕûÊý¡£Èôn>=c.size()£¬Ôòº¯ÊýÐÐÎªÎ´¶¨Òå
+	c.at(n)			·µ»ØÏÂ±êÎªnµÄÔªËØµÄÒýÓÃ¡£Èç¹ûÏÂ±êÔ½½ç£¬ÔòÅ×³öÒ»out_of_rangeÒì³£
+
+13. Ë³ÐòÈÝÆ÷µÄÉ¾³ý²Ù×÷
+	ÕâÐ©²Ù×÷»á¸Ä±äÈÝÆ÷µÄ´óÐ¡£¬ËùÒÔ²»ÊÊÓÃÓÚarray¡£
+	forward_listÓÐÌØÊâ°æ±¾µÄerase¡£
+	forward_list²»Ö§³Öpop_back£»vectorºÍstring²»Ö§³Öpop_front¡£
+	c.pop_back()	É¾³ýcÖÐÎ²ÔªËØ¡£ÈôcÎª¿Õ£¬Ôòº¯ÊýÐÐÎªÎ´¶¨Òå¡£º¯Êý·µ»Øvoid
+	c.pop_front()	É¾³ýcÖÐÊ×ÔªËØ¡£ÈôcÎª¿Õ£¬Ôòº¯ÊýÐÐÎªÎ´¶¨Òå¡£º¯Êý·µ»Øvoid
+	c.erase(p)		É¾³ýµü´úÆ÷pËùÖ¸¶¨µÄÔªËØ£¬·µ»ØÒ»¸öÖ¸Ïò±»É¾ÔªËØÖ®ºóÔªËØµÄµü´úÆ÷£¬ÈôpÖ¸ÏòÎ²ÔªËØ£¬Ôò
+					·µ»ØÎ²ºó(off-the-end)µü´úÆ÷¡£ÈôpÊÇÎ²ºóµü´úÆ÷£¬Ôòº¯ÊýÐÐÎªÎ´¶¨Òå¡£
+	c.erase(b, e)	É¾³ýµü´úÆ÷bºÍeËùÖ¸¶¨·¶Î§ÄÚµÄÔªËØ¡£·µ»ØÒ»¸öÖ¸Ïò×îºóÒ»¸ö±»É¾ÔªËØÖ®ºóÔªËØµÄµü´úÆ÷£¬Èô
+					e±¾Éí¾ÍÊÇÎ²ºóµü´úÆ÷£¬Ôòº¯ÊýÒ²·µ»ØÎ²ºóµü´úÆ÷¡£
+	c.clear()		É¾³ýcÖÐµÄËùÓÐÔªËØ¡£·µ»Øvoid
+	WARNING£º		É¾³ýdequeÖÐ³ýÊ×Î²Î»ÖÃÖ®ÍâµÄÈÎºÎÔªËØ¶¼»áÊ¹ËùÓÐµü´úÆ÷¡¢ÒýÓÃºÍÖ¸ÕëÊ§Ð§¡£Ö¸Ïòvector»ò
+					stringÖÐÉ¾³ýµãÖ®ºóÎ»ÖÃµÄµü´úÆ÷¡¢ÒýÓÃºÍÖ¸Õë¶¼»áÊ§Ð§¡£
+
+14. ÔÚforward_listÖÐ²åÈë»òÉ¾³ýÔªËØµÄ²Ù×÷
+	lst.before_begin()		·µ»ØÖ¸ÏòÁ´±íÊ×ÔªËØÖ®Ç°²»´æÔÚµÄÔªËØµÄµü´úÆ÷¡£´Ëµü´úÆ÷²»ÄÜ½âÒýÓÃ¡£
+	lst.cbefore_begin()		cbefore_begin()·µ»ØÒ»¸öconst_iterator¡£
+
+	lst.insert_after(p,t)   ÔÚµü´úÆ÷pÖ®ºóµÄÎ»ÖÃ²åÈëÔªËØ¡£tÊÇÒ»¸ö¶ÔÏó£¬nÊÇÊýÁ¿£¬
+	lst.insert_after(p,n,t) bºÍeÊÇ±íÊ¾·¶Î§µÄÒ»¶Ôµü´úÆ÷(bºÍe²»ÄÜÖ¸ÏòlstÄÚ)£¬
+	lst.insert_after(p,b,e) ilÊÇÒ»¸ö»¨À¨ºÅÁÐ±í¡£·µ»ØÒ»¸öÖ¸Ïò×îºóÒ»¸ö²åÈëÔªËØµÄµü´úÆ÷¡£Èç¹û
+	lst.insert_after(p,il)  ·¶Î§Îª¿Õ£¬Ôò·µ»Øp¡£ÈôpÎªÎ²ºóµü´úÆ÷£¬Ôòº¯ÊýÐÐÎªÎ´¶¨Òå¡£
+
+	emplace_after(p, args)  Ê¹ÓÃargsÔÚpÖ¸¶¨µÄÎ»ÖÃÖ®ºó´´½¨Ò»¸öÔªËØ¡£·µ»ØÒ»¸öÖ¸ÏòÕâ¸öÐÂÔªËØµÄµü´úÆ÷¡£Èôp
+							ÎªÎ²ºóµü´úÆ÷£¬Ôòº¯ÊýÐÐÎªÎ´¶¨Òå
+	lst.erase_after(p)		É¾³ýpÖ¸ÏòµÄÎ»ÖÃÖ®ºóµÄÔªËØ£¬»òÉ¾³ý´ÓbÖ®ºóÖ±µ½£¨µ«²»°üº¬£©eÖ®¼äµÄÔªËØ¡£·µ»ØÒ»¸ö
+	lst.erase_after(b,e)	Ö¸Ïò±»É¾ÔªËØÖ®ºóÔªËØµÄµü´úÆ÷£¬Èô²»´æÔÚÕâÑùµÄÔªËØ£¬Ôò·µ»ØÎ²ºóµü´úÆ÷¡£Èç¹ûpÖ¸Ïò
+							lstµÄÎ²ÔªËØ»òÕßÊÇÒ»¸öÎ²ºóµü´úÆ÷£¬Ôòº¯ÊýÐÐÎªÎ´¶¨Òå¡£
+
+15. Ë³ÐòÈÝÆ÷´óÐ¡²Ù×÷
+	resize ²»ÊÊÓÃÓÚarray
+	c.resize(n)		µ÷ÕûcµÄ´óÐ¡Îªn¸öÔªËØ¡£Èôn<c.size()£¬Ôò¶à³öµÄÔªËØ±»¶ªÆú¡£Èô±ØÐëÌí¼ÓÐÂÔªËØ£¬¶ÔÐÂÔªËØ½øÐÐÖµ³õÊ¼»¯
+	c.resize(n,t)	µ÷ÕûcµÄ´óÐ¡Îªn¸öÔªËØ¡£ÈÎºÎÐÂÌí¼ÓµÄÔªËØ¶¼³õÊ¼»¯ÎªÖµt
+
+	WARNING£ºÈç¹ûresizeËõÐ¡ÈÝÆ÷£¬ÔòÖ¸Ïò±»É¾³ýÔªËØµÄµü´úÆ÷¡¢ÒýÓÃºÍÖ¸Õë¶¼»áÊ§Ð§£»¶Ôvector¡¢string»òdeque½øÐÐ
+			resize¿ÉÄÜµ¼ÖÂµü´úÆ÷¡¢Ö¸ÕëºÍÒýÓÃÊ§Ð§¡£
+
+16. ÈÝÆ÷´óÐ¡¹ÜÀí²Ù×÷
+	shrink_to_fitÖ»ÊÊÓÃÓÚvector¡¢stringºÍdeque¡£
+	capacityºÍreserveÖ»ÊÊÓÃÓÚvectorºÍstring¡£
+	c.shrink_to_fit()		Çë½«capacity()¼õÉÙÎªÓësize()ÏàÍ¬´óÐ¡
+	c.capacity()			²»ÖØÐÂ·ÖÅäÄÚ´æ¿Õ¼äµÄ»°£¬c¿ÉÒÔ±£´æ¶àÉÙ¸öÔªËØ
+	c.reserve()				·ÖÅäÖÁÉÙÄÜÈÝÄÉn¸öÔªËØµÄÄÚ´æ¿Õ¼ä
+
+17. ¹¹ÔìstringµÄÆäËû·½·¨
+	-------------------------------------------------------------------------------------------------
+	n¡¢len2ºÍpos2¶¼ÊÇÎÞ·ûºÅÖµ
+	string s(cp, n)		sÊÇcpÖ¸ÏòµÄÊý×éÖÐÇ°n¸ö×Ö·ûµÄ¿½±´¡£´ËÊý×éÖÁÉÙÓ¦¸Ã°üº¬n¸ö×Ö·û
+	string s(s2, pos2)  sÊÇstring s2´ÓÏÂ±êpos2¿ªÊ¼µÄ×Ö·ûµÄ¿½±´¡£Èôpos2>s2.size(), ¹¹Ôìº¯ÊýµÄÐÐÎªÎ´¶¨Òå
+	string s(s2, pos2, len2)  sÊÇstring s2´ÓÏÂ±êpos2¿ªÊ¼len2¸ö×Ö·ûµÄ¿½±´¡£Èôpos2>s2.size()£¬¹¹Ôìº¯Êý
+							µÄÐÐÎªÎ´¶¨Òå¡£²»¹Ülen2µÄÖµÊÇ¶àÉÙ£¬¹¹Ôìº¯ÊýÖÁ¶à¿½±´s2.size()-pos2¸ö×Ö·û¡£
+	-------------------------------------------------------------------------------------------------
+18. ×Ó×Ö·û´®²Ù×÷
+	s.substr(pos, n)   ·µ»ØÒ»¸östring£¬°üº¬sÖÐ´Ópos¿ªÊ¼µÄn¸ö×Ö·ûµÄ¿½±´¡£posµÄÄ¬ÈÏÖµÎª0¡£nµÄÄ¬ÈÏÖµÎª
+			s.size()-pos£¬¼´¿½±´´Ópos¿ªÊ¼µÄËùÓÐ×Ö·û¡£
+19. ÐÞ¸ÄstringµÄ²Ù×÷
+	------------------------------------------------------------------------------------------------
+	s.insert(pos, args)  ÔÚposÖ®Ç°²åÈëargsÖ¸¶¨µÄ×Ö·û¡£pos¿ÉÒÔÊÇÒ»¸öÏÂ±ê»òÒ»¸öµü´úÆ÷¡£½ÓÊÜÏÂ±êµÄ°æ±¾
+			·µ»ØÒ»¸öÖ¸ÏòsµÄÒýÓÃ£»½ÓÊÜµü´úÆ÷µÄ°æ±¾·µ»ØÖ¸¶¨µÚÒ»¸ö²åÈë×Ö·ûµÄµü´úÆ÷
+	s.erase(pos, len)  É¾³ý´ÓÎ»ÖÃpos¿ªÊ¼µÄlen¸ö×Ö·û¡£Èç¹ûlen±»Ê¡ÂÔ£¬ÔòÉ¾³ý´Ópos¿ªÊ¼Ö±ÖÁsÄ©Î²µÄËùÓÐ×Ö·û
+			¡£·µ»ØÒ»¸öÖ¸ÏòsµÄÒýÓÃ
+	s.assign(args)  ½«sÖÐµÄ×Ö·ûÌæ»»ÎªargsÖ¸¶¨µÄ×Ö·û¡£·µ»ØÒ»¸öÖ¸ÏòsµÄÒýÓÃ
+	s.append(args)  ½«args×·¼Óµ½s¡£·µ»ØÒ»¸öÖ¸ÏòsµÄÒýÓÃ
+	s.replace(range, args)  É¾³ýsÖÐ·¶Î§rangeÄÚµÄ×Ö·û£¬Ìæ»»ÎªargsÖ¸¶¨µÄ×Ö·û¡£range»òÕßÊÇÒ»¸öÏÂ±êºÍÒ»¸ö
+			³¤¶È£¬»òÕßÊÇÒ»¶ÔÖ¸ÏòsµÄµü´úÆ÷¡£·µ»ØÒ»¸öÖ¸ÏòsµÄÒýÓÃ
+
+	args¿ÉÒÔÊÇÏÂÁÐÐÎÊ½Ö®Ò»£»appendºÍassign¿ÉÒÔÊ¹ÓÃËùÓÐÐÎÊ½¡£
+	str²»ÄÜÓësÏàÍ¬£¬µü´úÆ÷bºÍe²»ÄÜÖ¸Ïòs¡£
+	str			×Ö·û´®str
+	str,pos,len strÖÐ´Ópos¿ªÊ¼×î¶àlen¸ö×Ö·û
+	cp,len		´ÓcpÖ¸ÏòµÄ×Ö·ûÊý×éµÄÇ°£¨×î¶à£©len¸ö×Ö·û
+	cp			cpÖ¸ÏòµÄÒÔ¿Õ×Ö·û½áÎ²µÄ×Ö·ûÊý×é
+	n,c			n¸ö×Ö·ûc
+	b,e			µü´úÆ÷bºÍeÖ¸¶¨µÄ·¶Î§ÄÚµÄ×Ö·û
+	³õÊ¼»¯ÁÐ±í	»¨À¨ºÅ°üÎ§µÄ£¬ÒÔ¶ººÅ·Ö¸ôµÄ×Ö·ûÁÐ±í
+	replaceºÍinsertËùÔÊÐíµÄargsÐÎÊ½ÒÀÀµÓÚrangeºÍposÊÇÈçºÎÖ¸¶¨µÄ¡£
+	replace			replace		insert		insert		args¿ÉÒÔÊÇ
+	(pos,len,args)  (b,e,args)  (pos,args)  (iter,args)
+	ÊÇ				ÊÇ			ÊÇ			·ñ			str
+	ÊÇ				·ñ			ÊÇ			·ñ			str,pos,len
+	ÊÇ				ÊÇ			ÊÇ			·ñ			cp,len
+	ÊÇ				ÊÇ			·ñ			·ñ			cp
+	ÊÇ				ÊÇ			ÊÇ			ÊÇ			n,c
+	·ñ				ÊÇ			·ñ			ÊÇ			b2,e2
+	·ñ				ÊÇ			·ñ			ÊÇ			³õÊ¼»¯ÁÐ±í
+	------------------------------------------------------------------------------------------------
+20. stringËÑË÷²Ù×÷
+	------------------------------------------------------------------------------------------------
+	ËÑË÷²Ù×÷·µ»ØÖ¸¶¨×Ö·û³öÏÖµÄÏÂ±ê£¬Èç¹ûÎ´ÕÒµ½Ôò·µ»Ønpos¡£
+	s.find(args)				²éÕÒsÖÐargsµÚÒ»´Î³öÏÖµÄÎ»ÖÃ
+	s.rfind(args)				²éÕÒsÖÐargs×îºóÒ»´Î³öÏÖµÄÎ»ÖÃ
+	s.find_first_of(args)		ÔÚsÖÐ²éÕÒargsÖÐÈÎºÎÒ»¸ö×Ö·ûµÚÒ»´Î³öÏÖµÄÎ»ÖÃ¡£
+	s.find_last_of(args)		ÔÚsÖÐ²éÕÒargsÖÐÈÎºÎÒ»¸ö×Ö·û×îºóÒ»´Î³öÏÖµÄÎ»ÖÃ¡£
+	s.find_first_not_of(args)	ÔÚsÖÐ²éÕÒµÚÒ»¸ö²»ÔÚargsÖÐµÄ×Ö·û
+	s.find_last_not_of(args)	ÔÚsÖÐ²éÕÒ×îºóÒ»¸ö²»ÔÚargsÖÐµÄ×Ö·û
+
+	args±ØÐëÊÇÒÔÏÂÐÎÊ½Ö®Ò»
+	c,pos		´ÓsÖÐÎ»ÖÃpos¿ªÊ¼²éÕÒ×Ö·ûc¡£posÄ¬ÈÏÎª0
+	s2,pos		´ÓsÖÐÎ»ÖÃpos¿ªÊ¼²éÕÒ×Ö·û´®s2¡£posÄ¬ÈÏÎª0
+	cp,pos		´ÓsÖÐÎ»ÖÃpos¿ªÊ¼²éÕÒÖ¸ÕëcpÖ¸ÏòµÄÒÔ¿Õ×Ö·û½áÎ²µÄC·ç¸ñ×Ö·û´®¡£posÄ¬ÈÏÎª0
+	cp,pos,n	´ÓsÖÐÎ»ÖÃpos¿ªÊ¼²éÕÒÖ¸ÕëcpÖ¸ÏòµÄÊý×éµÄÇ°n¸ö×Ö·û¡£posºÍnÎÞÄ¬ÈÏÖµ
+	------------------------------------------------------------------------------------------------
+21. s.compareµÄ¼¸ÖÖ²ÎÊýÐÎÊ½
+	------------------------------------------------------------------------------------------------
+	s2						±È½ÏsºÍs2
+	pos1,n1,s2				½«2ÖÐ´Ópos1¿ªÊ¼µÄn1¸ö×Ö·ûÓës2½øÐÐ±È½Ï
+	pos1,n1,s2,pos2,n2		½«sÖÐ´Ópos1¿ªÊ¼µÄn1¸ö×Ö·ûÓës2ÖÐ´Ópos2¿ªÊ¼µÄn2¸ö×Ö·û½øÐÐ±È½Ï
+	cp						±È½ÏsÓëcpÖ¸ÏòµÄÒÔ¿Õ×Ö·û½áÎ²µÄ×Ö·ûÊý×é
+	pos1,n1,cp				½«sÖÐ´Ópos1¿ªÊ¼µÄn1¸ö×Ö·ûÓëcpÖ¸ÏòµÄÒÔ¿Õ×Ö·û½áÎ²µÄ×Ö·ûÊý×é½øÐÐ±È½Ï
+	pos1,n1,cp,n2			½«sÖÐ´Ópos1¿ªÊ¼µÄn1¸ö×Ö·ûÓëÖ¸ÕëcpÖ¸ÏòµÄµØÖ·¿ªÊ¼µÄn2¸ö×Ö·û½øÐÐ±È½Ï
+	------------------------------------------------------------------------------------------------
+22. stringºÍÊýÖµÖ®¼äµÄ×ª»»
+	------------------------------------------------------------------------------------------------
+	to_string(val)			Ò»×éÖØÔØº¯Êý£¬·µ»ØÊýÖµvalµÄstring±íÊ¾¡£val¿ÉÒÔÊÇÈÎºÎËãÊýÀàÐÍ¡£¶ÔÃ¿¸ö¸¡µã
+						  ÀàÐÍºÍint»ò¸ü´óµÄÕûÐÎ£¬¶¼ÓÐÏàÓ¦°æ±¾µÄto_string¡£ÓëÍù³£Ò»Ñù£¬Ð¡ÕûÐÎ»á±»ÌáÉý
+	stoi(s,p,b)			    ·µ»ØsµÄÆðÊ¼×Ó´®£¨±íÊ¾ÕûÊýÄÚÈÝ£©µÄÊýÖµ£¬·µ»ØÖµÀàÐÍ·Ö±ðÊÇint¡¢long¡¢unsigned
+	stol(s,p,b)				long¡¢long long¡¢unsigned long long¡£b±íÊ¾×ª»»ËùÓÃµÄ»ùÊý£¬Ä¬ÈÏÎª10¡£pÊÇ
+	stol(s,p,b)				size_tÖ¸Õë£¬ÓÃÀ´±£´æsÖÐµÚÒ»¸ö·ÇÊýÖµ×Ö·ûµÄÏÂ±ê£¬pÄ¬ÈÏÎª0£¬¼´£¬º¯Êý²»±£´æ
+	stol(s,p,b)				ÏÂ±ê
+	stol(s,p,b)
+
+	stof(s,p)				·µ»ØsµÄÆðÊ¼×Ó´®£¨±íÊ¾¸¡µãÊýÄÚÈÝ£©µÄÊýÖµ£¬·µ»ØÖµÀàÐÍ·Ö±ðÊÇfloat¡¢double»ò
+	stod(s,p)				long double¡£²ÎÊýpµÄ×÷ÓÃÓëÕûÊý×ª»»º¯ÊýÖÐÒ»Ñù
+	stold(s,p)
+	------------------------------------------------------------------------------------------------
+23. ³ýÁËË³ÐòÈÝÆ÷Íâ£¬±ê×¼¿â»¹¶¨ÒåÁËÈý¸öË³ÐòÈÝÆ÷ÊÊÅäÆ÷£ºstack¡¢queueºÍpriority_queue¡£Ä¬ÈÏÇé¿öÏÂ£¬stack
+	ºÍqueueÊÇ»ùÓÚdequeÊµÏÖµÄ£¬priority_queueÊÇÔÚvectorÖ®ÉÏÊµÏÖµÄ¡£
+	------------------------------------------------------------------------------------------------
+	size_type				Ò»ÖÖÀàÐÍ£¬×ãÒÔ±£´æµ±Ç°ÀàÐÍµÄ×î´ó¶ÔÏóµÄ´óÐ¡
+	value_type				ÔªËØÀàÐÍ
+	container_type			ÊµÏÖÊÊÅäÆ÷µÄµ×²ãÈÝÆ÷ÀàÐÍ
+	A a;					´´½¨Ò»¸öÃûÎªaµÄ¿ÕÊÊÅäÆ÷
+	A a(c);					´´½¨Ò»¸öÃûÎªaµÄÊÊÅäÆ÷£¬´øÓÐÈÝÆ÷cµÄÒ»¸ö¿½±´
+	¹ØÏµÔËËã·û				Ã¿¸öÊÊÅäÆ÷¶¼Ö§³ÖËùÓÐ¹ØÏµÔËËã·û£º==¡¢!=¡¢<¡¢<=¡¢>ºÍ>=ÕâÐ©ÔËËã·û·µ»Øµ×²ãÈÝÆ÷
+							µÄ±È½Ï½á¹û
+	a.empty()				Èôa°üº¬ÈÎºÎÔªËØ£¬·µ»Øfalse£¬·ñÔò·µ»Øtrue
+	a.size()				·µ»ØaÖÐµÄÔªËØÊýÄ¿
+	swap(a,b)				½»»»aºÍbµÄÄÚÈÝ£¬aºÍb±ØÐëÓÐÏàÍ¬ÀàÐÍ£¬°üÀ¨µ×²ãÈÝÆ÷ÀàÐÍÒ²±ØÐëÏàÍ¬
+	a.swap(b)
+	-------------------------------------------------------------------------------------------------
+24. Õ»(stack)²Ù×÷²¹³ä
+	------------------------------------------------------------------------------------------------
+	Õ»Ä¬ÈÏ»ùÓÚdequeÊµÏÖ£¬Ò²¿ÉÒÔÔÚlist»òvectorÖ®ÉÏÊµÏÖ¡£
+	s.pop()				É¾³ýÕ»¶¥ÔªËØ£¬µ«²»·µ»Ø¸ÃÔªËØÖµ
+	s.push(item)	    ´´½¨Ò»¸öÐÂÔªËØÑ¹ÈëÕ»¶¥£¬¸ÃÔªËØÍ¨¹ý¿½±´»òÒÆ¶¯item¶øÀ´£¬»òÕßÓÉargs¹¹Ôì
+	s.emplace(args)		
+	s.top()				·µ»ØÕ»¶¥ÔªËØ£¬µ«²»½«ÔªËØµ¯³öÕ»
+	------------------------------------------------------------------------------------------------
+25. ¶ÓÁÐ(queue)ºÍÓÅÏÈ¼¶¶ÓÁÐ(priority_queue)²Ù×÷
+	------------------------------------------------------------------------------------------------
+	queueÄ¬ÈÏ»ùÓÚdequeÊµÏÖ£¬prioriry_queueÄ¬ÈÏ»ùÓÚvectorÊµÏÖ£»
+	queueÒ²¿ÉÒÔÓÃlist»òvectorÊµÏÖ£¬priority_queueÒ²¿ÉÒÔÓÃdequeÊµÏÖ¡£
+	q.pop()				·µ»ØqueueµÄÊ×ÔªËØ»òpriority_queueµÄ×î¸ßÓÅÏÈ¼¶µÄÔªËØ£¬µ«²»É¾³ý´ËÔªËØ
+	q.front()			·µ»ØÊ×ÔªËØ»òÎ²ÔªËØ£¬µ«²»É¾³ý´ËÔªËØ£¬Ö»ÊÊÓÃÓÚqueue
+	q.back()
+	q.top()				·µ»Ø×î¸ßÓÅÏÈ¼¶ÔªËØ£¬µ«²»É¾³ý¸ÃÔªËØ£¬Ö»ÊÊÓÃÓÚpriority_queue
+	q.push(item)		ÔÚqueueÄ©Î²»òpriority_queueÖÐÇ¡µ±µÄÎ»ÖÃ´´½¨Ò»¸öÔªËØ£¬
+	q.emplace(args)		ÆäÖµÎªitem£¬»òÕßÓÉargs¹¹Ôì
+	------------------------------------------------------------------------------------------------
 */
