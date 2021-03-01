@@ -25,6 +25,9 @@
     <Filter Include="C++ Standard Library\STL">
       <UniqueIdentifier>{6ebe955c-8bb0-43bb-82c9-ecf1a63125de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="C++ Standard Library\Generic Algorithm">
+      <UniqueIdentifier>{8b2e41cc-4b64-45e9-829e-e26e2341d639}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -68,6 +71,9 @@
     </ClInclude>
     <ClInclude Include="Sequential_Container.h">
       <Filter>C++ Standard Library\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="Generic_Algorithm.h">
+      <Filter>C++ Standard Library\Generic Algorithm</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
