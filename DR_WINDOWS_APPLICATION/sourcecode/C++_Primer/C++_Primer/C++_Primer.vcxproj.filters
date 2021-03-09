@@ -28,6 +28,9 @@
     <Filter Include="C++ Standard Library\Generic Algorithm">
       <UniqueIdentifier>{8b2e41cc-4b64-45e9-829e-e26e2341d639}</UniqueIdentifier>
     </Filter>
+    <Filter Include="C++ Standard Library\Associative Container">
+      <UniqueIdentifier>{d1675ab5-1a22-4a86-84c6-6a64c93faed8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -74,6 +77,9 @@
     </ClInclude>
     <ClInclude Include="Generic_Algorithm.h">
       <Filter>C++ Standard Library\Generic Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Associative-container.h">
+      <Filter>C++ Standard Library\Associative Container</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

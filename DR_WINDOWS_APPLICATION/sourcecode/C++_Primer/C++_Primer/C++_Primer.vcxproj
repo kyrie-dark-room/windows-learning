@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Associative-container.h" />
     <ClInclude Include="C++_Exception.h" />
     <ClInclude Include="C++_KeyWord.h" />
     <ClInclude Include="C++_std.h" />
