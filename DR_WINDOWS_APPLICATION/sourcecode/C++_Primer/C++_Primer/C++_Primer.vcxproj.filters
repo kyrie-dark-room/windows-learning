@@ -31,6 +31,9 @@
     <Filter Include="C++ Standard Library\Associative Container">
       <UniqueIdentifier>{d1675ab5-1a22-4a86-84c6-6a64c93faed8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="C++ Standard Library\Dynamical Memory">
+      <UniqueIdentifier>{876ad14f-5c63-43e7-af4c-03e57acef6c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -80,6 +83,9 @@
     </ClInclude>
     <ClInclude Include="Associative-container.h">
       <Filter>C++ Standard Library\Associative Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Dynamical_Memoryh.h">
+      <Filter>C++ Standard Library\Dynamical Memory</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
