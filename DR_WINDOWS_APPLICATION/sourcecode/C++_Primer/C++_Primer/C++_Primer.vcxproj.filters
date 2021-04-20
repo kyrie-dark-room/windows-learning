@@ -34,6 +34,9 @@
     <Filter Include="C++ Standard Library\Dynamical Memory">
       <UniqueIdentifier>{876ad14f-5c63-43e7-af4c-03e57acef6c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class Designer Tools">
+      <UniqueIdentifier>{9c157ff8-210e-4ef6-bfa7-cb7069ca408f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -86,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="Dynamical_Memoryh.h">
       <Filter>C++ Standard Library\Dynamical Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Copy_Control.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
