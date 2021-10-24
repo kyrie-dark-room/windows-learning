@@ -166,7 +166,9 @@
     <ClInclude Include="initialize_by_type.h" />
     <ClInclude Include="integral_type.h" />
     <ClInclude Include="IO_Class.h" />
+    <ClInclude Include="OOP.h" />
     <ClInclude Include="operator_precedence.h" />
+    <ClInclude Include="OverloadAndTypeCase.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Sequential_Container.h" />
     <ClInclude Include="variable.h" />

@@ -91,7 +91,13 @@
       <Filter>C++ Standard Library\Dynamical Memory</Filter>
     </ClInclude>
     <ClInclude Include="Copy_Control.h">
-      <Filter>头文件</Filter>
+      <Filter>Class Designer Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="OverloadAndTypeCase.h">
+      <Filter>Class Designer Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="OOP.h">
+      <Filter>Class Designer Tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
