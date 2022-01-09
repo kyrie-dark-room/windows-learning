@@ -171,6 +171,7 @@
     <ClInclude Include="OverloadAndTypeCase.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Sequential_Container.h" />
+    <ClInclude Include="Templates_And_Generic_Programming.h" />
     <ClInclude Include="variable.h" />
   </ItemGroup>
   <ItemGroup>

@@ -99,6 +99,9 @@
     <ClInclude Include="OOP.h">
       <Filter>Class Designer Tools</Filter>
     </ClInclude>
+    <ClInclude Include="Templates_And_Generic_Programming.h">
+      <Filter>Class Designer Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
