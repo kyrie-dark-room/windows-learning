@@ -37,6 +37,9 @@
     <Filter Include="Class Designer Tools">
       <UniqueIdentifier>{9c157ff8-210e-4ef6-bfa7-cb7069ca408f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Advanced topics">
+      <UniqueIdentifier>{a754e7dd-1576-4cdf-981d-8b7562757886}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -101,6 +104,9 @@
     </ClInclude>
     <ClInclude Include="Templates_And_Generic_Programming.h">
       <Filter>Class Designer Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Standard library special facilities.h">
+      <Filter>Advanced topics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
