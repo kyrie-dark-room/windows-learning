@@ -173,6 +173,7 @@
     <ClInclude Include="Sequential_Container.h" />
     <ClInclude Include="Standard library special facilities.h" />
     <ClInclude Include="Templates_And_Generic_Programming.h" />
+    <ClInclude Include="Tools for large programs.h" />
     <ClInclude Include="variable.h" />
   </ItemGroup>
   <ItemGroup>

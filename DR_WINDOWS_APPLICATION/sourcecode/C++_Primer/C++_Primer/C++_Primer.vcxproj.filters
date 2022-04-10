@@ -108,6 +108,9 @@
     <ClInclude Include="Standard library special facilities.h">
       <Filter>Advanced topics</Filter>
     </ClInclude>
+    <ClInclude Include="Tools for large programs.h">
+      <Filter>Advanced topics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
