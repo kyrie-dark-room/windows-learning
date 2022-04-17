@@ -171,6 +171,7 @@
     <ClInclude Include="OverloadAndTypeCase.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Sequential_Container.h" />
+    <ClInclude Include="Special Tools and Techniques.h" />
     <ClInclude Include="Standard library special facilities.h" />
     <ClInclude Include="Templates_And_Generic_Programming.h" />
     <ClInclude Include="Tools for large programs.h" />
