@@ -22,6 +22,18 @@
     <Filter Include="HY_Command">
       <UniqueIdentifier>{d9a9b4fd-9e47-40ab-a65b-77d28ced753d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_Proxy">
+      <UniqueIdentifier>{df1b5bcb-8459-4c0e-8a48-38653c7a59b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HY_State">
+      <UniqueIdentifier>{11bd76c3-b3a6-4b19-9543-2baa4352bb92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HY_Adapter">
+      <UniqueIdentifier>{ec010676-4f35-42ec-b106-e6c822690121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HY_Template_Method">
+      <UniqueIdentifier>{0228b5f3-c127-42e8-ac9c-2b19687e0e34}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HY_main.cpp">
@@ -36,6 +48,18 @@
     <ClCompile Include="CHYComman.cpp">
       <Filter>HY_Command</Filter>
     </ClCompile>
+    <ClCompile Include="CHYProxy.cpp">
+      <Filter>HY_Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYState.cpp">
+      <Filter>HY_State</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYAdapter.cpp">
+      <Filter>HY_Adapter</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYTemplateMethod.cpp">
+      <Filter>HY_Template_Method</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYSingleton.h">
@@ -46,6 +70,18 @@
     </ClInclude>
     <ClInclude Include="CHYComman.h">
       <Filter>HY_Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYProxy.h">
+      <Filter>HY_Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYState.h">
+      <Filter>HY_State</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYAdapter.h">
+      <Filter>HY_Adapter</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYTemplateMethod.h">
+      <Filter>HY_Template_Method</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

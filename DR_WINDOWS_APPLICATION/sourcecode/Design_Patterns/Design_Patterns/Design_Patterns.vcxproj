@@ -139,14 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CHYAdapter.cpp" />
     <ClCompile Include="CHYComman.cpp" />
+    <ClCompile Include="CHYProxy.cpp" />
     <ClCompile Include="CHYSingleton.cpp" />
+    <ClCompile Include="CHYState.cpp" />
+    <ClCompile Include="CHYTemplateMethod.cpp" />
     <ClCompile Include="CHYThreadLocker.cpp" />
     <ClCompile Include="HY_main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CHYAdapter.h" />
     <ClInclude Include="CHYComman.h" />
+    <ClInclude Include="CHYProxy.h" />
     <ClInclude Include="CHYSingleton.h" />
+    <ClInclude Include="CHYState.h" />
+    <ClInclude Include="CHYTemplateMethod.h" />
     <ClInclude Include="CHYThreadLocker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
