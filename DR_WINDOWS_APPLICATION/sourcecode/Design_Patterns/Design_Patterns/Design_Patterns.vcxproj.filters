@@ -34,6 +34,12 @@
     <Filter Include="HY_Template_Method">
       <UniqueIdentifier>{0228b5f3-c127-42e8-ac9c-2b19687e0e34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_Strategy">
+      <UniqueIdentifier>{7d0375d7-3a51-41e3-bada-4bd88bcc69db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HY_ChainOfReponsibility">
+      <UniqueIdentifier>{f0520fa5-cb66-42e3-a83e-693411facad6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HY_main.cpp">
@@ -60,6 +66,12 @@
     <ClCompile Include="CHYTemplateMethod.cpp">
       <Filter>HY_Template_Method</Filter>
     </ClCompile>
+    <ClCompile Include="CHYStrategy.cpp">
+      <Filter>HY_Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYChainOfReponsibility.cpp">
+      <Filter>HY_ChainOfReponsibility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYSingleton.h">
@@ -82,6 +94,12 @@
     </ClInclude>
     <ClInclude Include="CHYTemplateMethod.h">
       <Filter>HY_Template_Method</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYStrategy.h">
+      <Filter>HY_Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYChainOfReponsibility.h">
+      <Filter>HY_ChainOfReponsibility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
