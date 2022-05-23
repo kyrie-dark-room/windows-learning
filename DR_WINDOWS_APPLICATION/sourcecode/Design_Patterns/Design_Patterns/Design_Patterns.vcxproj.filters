@@ -40,6 +40,9 @@
     <Filter Include="HY_ChainOfReponsibility">
       <UniqueIdentifier>{f0520fa5-cb66-42e3-a83e-693411facad6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_Factory">
+      <UniqueIdentifier>{69d55e8b-5058-46ea-b3ea-84589137dda7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HY_main.cpp">
@@ -72,6 +75,12 @@
     <ClCompile Include="CHYChainOfReponsibility.cpp">
       <Filter>HY_ChainOfReponsibility</Filter>
     </ClCompile>
+    <ClCompile Include="CHYFactory.cpp">
+      <Filter>HY_Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYMutiStatusFactory.cpp">
+      <Filter>HY_Factory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYSingleton.h">
@@ -100,6 +109,12 @@
     </ClInclude>
     <ClInclude Include="CHYChainOfReponsibility.h">
       <Filter>HY_ChainOfReponsibility</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYFactory.h">
+      <Filter>HY_Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYMutiStatusFactory.h">
+      <Filter>HY_Factory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
