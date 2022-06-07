@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CHYAbstractConstructFunc.cpp" />
+    <ClCompile Include="CHYAbstractFactory.cpp" />
     <ClCompile Include="CHYAdapter.cpp" />
     <ClCompile Include="CHYChainOfReponsibility.cpp" />
     <ClCompile Include="CHYComman.cpp" />
@@ -153,6 +155,8 @@
     <ClCompile Include="HY_main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CHYAbstractConstructFunc.h" />
+    <ClInclude Include="CHYAbstractFactory.h" />
     <ClInclude Include="CHYAdapter.h" />
     <ClInclude Include="CHYChainOfReponsibility.h" />
     <ClInclude Include="CHYComman.h" />

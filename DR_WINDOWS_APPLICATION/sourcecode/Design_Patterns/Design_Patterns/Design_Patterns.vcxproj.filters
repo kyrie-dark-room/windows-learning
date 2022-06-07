@@ -81,6 +81,12 @@
     <ClCompile Include="CHYMutiStatusFactory.cpp">
       <Filter>HY_Factory</Filter>
     </ClCompile>
+    <ClCompile Include="CHYAbstractFactory.cpp">
+      <Filter>HY_Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYAbstractConstructFunc.cpp">
+      <Filter>HY_Factory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYSingleton.h">
@@ -114,6 +120,12 @@
       <Filter>HY_Factory</Filter>
     </ClInclude>
     <ClInclude Include="CHYMutiStatusFactory.h">
+      <Filter>HY_Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYAbstractFactory.h">
+      <Filter>HY_Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYAbstractConstructFunc.h">
       <Filter>HY_Factory</Filter>
     </ClInclude>
   </ItemGroup>
