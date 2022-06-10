@@ -142,10 +142,13 @@
     <ClCompile Include="CHYAbstractConstructFunc.cpp" />
     <ClCompile Include="CHYAbstractFactory.cpp" />
     <ClCompile Include="CHYAdapter.cpp" />
+    <ClCompile Include="CHYBuilder.cpp" />
     <ClCompile Include="CHYChainOfReponsibility.cpp" />
     <ClCompile Include="CHYComman.cpp" />
     <ClCompile Include="CHYFactory.cpp" />
+    <ClCompile Include="CHYMutipleDispatching.cpp" />
     <ClCompile Include="CHYMutiStatusFactory.cpp" />
+    <ClCompile Include="CHYObserver.cpp" />
     <ClCompile Include="CHYProxy.cpp" />
     <ClCompile Include="CHYSingleton.cpp" />
     <ClCompile Include="CHYState.cpp" />
@@ -153,15 +156,19 @@
     <ClCompile Include="CHYTemplateMethod.cpp" />
     <ClCompile Include="CHYThreadLocker.cpp" />
     <ClCompile Include="HY_main.cpp" />
+    <ClCompile Include="ObservedFlower.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYAbstractConstructFunc.h" />
     <ClInclude Include="CHYAbstractFactory.h" />
     <ClInclude Include="CHYAdapter.h" />
+    <ClInclude Include="CHYBuilder.h" />
     <ClInclude Include="CHYChainOfReponsibility.h" />
     <ClInclude Include="CHYComman.h" />
     <ClInclude Include="CHYFactory.h" />
+    <ClInclude Include="CHYMutipleDispatching.h" />
     <ClInclude Include="CHYMutiStatusFactory.h" />
+    <ClInclude Include="CHYObserver.h" />
     <ClInclude Include="CHYProxy.h" />
     <ClInclude Include="CHYSingleton.h" />
     <ClInclude Include="CHYState.h" />

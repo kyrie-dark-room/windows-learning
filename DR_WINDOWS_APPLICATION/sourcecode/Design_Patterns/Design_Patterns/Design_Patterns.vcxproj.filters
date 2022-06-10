@@ -43,6 +43,15 @@
     <Filter Include="HY_Factory">
       <UniqueIdentifier>{69d55e8b-5058-46ea-b3ea-84589137dda7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_Builder">
+      <UniqueIdentifier>{7e186fd6-e4d0-486c-95aa-755137340816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HY_Observer">
+      <UniqueIdentifier>{723ab2cf-d8e3-4956-94d9-f810a4181f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HY_MultipleDispatching">
+      <UniqueIdentifier>{029b0af1-03db-4945-a0d5-0d03d6a149e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HY_main.cpp">
@@ -87,6 +96,18 @@
     <ClCompile Include="CHYAbstractConstructFunc.cpp">
       <Filter>HY_Factory</Filter>
     </ClCompile>
+    <ClCompile Include="CHYBuilder.cpp">
+      <Filter>HY_Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYObserver.cpp">
+      <Filter>HY_Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="ObservedFlower.cpp">
+      <Filter>HY_Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYMutipleDispatching.cpp">
+      <Filter>HY_MultipleDispatching</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYSingleton.h">
@@ -127,6 +148,15 @@
     </ClInclude>
     <ClInclude Include="CHYAbstractConstructFunc.h">
       <Filter>HY_Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYBuilder.h">
+      <Filter>HY_Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYObserver.h">
+      <Filter>HY_Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYMutipleDispatching.h">
+      <Filter>HY_MultipleDispatching</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
