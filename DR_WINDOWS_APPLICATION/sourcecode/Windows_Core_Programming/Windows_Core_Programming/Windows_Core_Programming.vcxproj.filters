@@ -16,6 +16,12 @@
     <Filter Include="HY_ErrorHandler">
       <UniqueIdentifier>{622e2f1e-0d85-43d5-9a67-7249f298c650}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_Utils">
+      <UniqueIdentifier>{c1e1d6ca-acb1-49e9-ba19-7f313d5d2bd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HY_Utils\HY_StringUtils.h">
+      <UniqueIdentifier>{6581c459-7195-422d-b114-eb5d5686b7ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Windows_Core_Programming.cpp">
@@ -24,10 +30,16 @@
     <ClCompile Include="CHYErrorHandler.cpp">
       <Filter>HY_ErrorHandler</Filter>
     </ClCompile>
+    <ClCompile Include="CHYStringUtils.cpp">
+      <Filter>HY_Utils\HY_StringUtils.h</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h">
       <Filter>HY_ErrorHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYStringUtils.h">
+      <Filter>HY_Utils\HY_StringUtils.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
