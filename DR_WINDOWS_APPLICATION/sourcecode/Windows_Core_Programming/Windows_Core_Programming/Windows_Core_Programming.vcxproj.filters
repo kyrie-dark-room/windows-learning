@@ -19,8 +19,11 @@
     <Filter Include="HY_Utils">
       <UniqueIdentifier>{c1e1d6ca-acb1-49e9-ba19-7f313d5d2bd5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="HY_Utils\HY_StringUtils.h">
+    <Filter Include="HY_Utils\HY_StringUtils">
       <UniqueIdentifier>{6581c459-7195-422d-b114-eb5d5686b7ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HY_KernelObject">
+      <UniqueIdentifier>{63024071-c990-45b3-8847-f2640a5b7d75}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,7 +34,10 @@
       <Filter>HY_ErrorHandler</Filter>
     </ClCompile>
     <ClCompile Include="CHYStringUtils.cpp">
-      <Filter>HY_Utils\HY_StringUtils.h</Filter>
+      <Filter>HY_Utils\HY_StringUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYKernelObject.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,7 +45,10 @@
       <Filter>HY_ErrorHandler</Filter>
     </ClInclude>
     <ClInclude Include="CHYStringUtils.h">
-      <Filter>HY_Utils\HY_StringUtils.h</Filter>
+      <Filter>HY_Utils\HY_StringUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYKernelObject.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

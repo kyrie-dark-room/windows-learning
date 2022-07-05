@@ -144,11 +144,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CHYErrorHandler.cpp" />
+    <ClCompile Include="CHYKernelObject.cpp" />
     <ClCompile Include="CHYStringUtils.cpp" />
     <ClCompile Include="Windows_Core_Programming.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h" />
+    <ClInclude Include="CHYKernelObject.h" />
     <ClInclude Include="CHYStringUtils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
