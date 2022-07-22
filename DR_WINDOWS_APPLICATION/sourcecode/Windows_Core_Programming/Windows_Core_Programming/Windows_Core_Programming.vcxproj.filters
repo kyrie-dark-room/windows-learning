@@ -37,7 +37,13 @@
       <Filter>HY_Utils\HY_StringUtils</Filter>
     </ClCompile>
     <ClCompile Include="CHYKernelObject.cpp">
-      <Filter>源文件</Filter>
+      <Filter>HY_KernelObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYCreatePrivateNamespace.cpp">
+      <Filter>HY_KernelObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYProcessKernelObject.cpp">
+      <Filter>HY_KernelObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,7 +54,13 @@
       <Filter>HY_Utils\HY_StringUtils</Filter>
     </ClInclude>
     <ClInclude Include="CHYKernelObject.h">
-      <Filter>头文件</Filter>
+      <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYCreatePrivateNamespace.h">
+      <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYProcessKernelObject.h">
+      <Filter>HY_KernelObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

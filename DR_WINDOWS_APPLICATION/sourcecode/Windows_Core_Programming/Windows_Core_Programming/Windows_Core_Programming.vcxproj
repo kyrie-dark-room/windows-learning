@@ -143,14 +143,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CHYCreatePrivateNamespace.cpp" />
     <ClCompile Include="CHYErrorHandler.cpp" />
     <ClCompile Include="CHYKernelObject.cpp" />
+    <ClCompile Include="CHYProcessKernelObject.cpp" />
     <ClCompile Include="CHYStringUtils.cpp" />
     <ClCompile Include="Windows_Core_Programming.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CHYCreatePrivateNamespace.h" />
     <ClInclude Include="CHYErrorHandler.h" />
     <ClInclude Include="CHYKernelObject.h" />
+    <ClInclude Include="CHYProcessKernelObject.h" />
     <ClInclude Include="CHYStringUtils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
