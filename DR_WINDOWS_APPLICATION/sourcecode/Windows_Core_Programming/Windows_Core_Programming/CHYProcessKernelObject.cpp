@@ -343,4 +343,9 @@ namespace HY_KERNELOBJECT
 		CloseHandle(hToken);
 		return(bResult);
 	}
+
+	BOOL CHYProcessKernelObject::GetProcessIoCounters(HANDLE hProcess, PIO_COUNTERS pIoCounters)
+	{
+		return ::GetProcessIoCounters(hProcess, pIoCounters);
+	}
 }

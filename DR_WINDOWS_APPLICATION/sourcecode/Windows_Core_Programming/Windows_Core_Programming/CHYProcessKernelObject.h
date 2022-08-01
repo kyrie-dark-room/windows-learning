@@ -289,6 +289,9 @@ namespace HY_KERNELOBJECT
 
 		// 返回提升类型和指出进程是否正在以管理员身份运行的布尔值
 		BOOL GetProcessElevation(TOKEN_ELEVATION_TYPE* pElevationType, BOOL* pIsAdmin);
+
+		// 获得进程的IO
+		BOOL GetProcessIoCounters(HANDLE hProcess, PIO_COUNTERS pIoCounters);
 	};
 }
 

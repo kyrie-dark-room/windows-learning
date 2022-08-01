@@ -45,6 +45,12 @@
     <ClCompile Include="CHYProcessKernelObject.cpp">
       <Filter>HY_KernelObject</Filter>
     </ClCompile>
+    <ClCompile Include="CHYJobKernelObject.cpp">
+      <Filter>HY_KernelObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYThreadKernelObject.cpp">
+      <Filter>HY_KernelObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h">
@@ -60,6 +66,12 @@
       <Filter>HY_KernelObject</Filter>
     </ClInclude>
     <ClInclude Include="CHYProcessKernelObject.h">
+      <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYJobKernelObject.h">
+      <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYThreadKernelObject.h">
       <Filter>HY_KernelObject</Filter>
     </ClInclude>
   </ItemGroup>
