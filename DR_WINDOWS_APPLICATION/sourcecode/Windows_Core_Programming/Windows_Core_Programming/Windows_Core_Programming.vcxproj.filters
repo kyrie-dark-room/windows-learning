@@ -25,6 +25,9 @@
     <Filter Include="HY_KernelObject">
       <UniqueIdentifier>{63024071-c990-45b3-8847-f2640a5b7d75}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_KernelObject\CHYThreadMutex">
+      <UniqueIdentifier>{138a0f45-8875-4594-95f5-8bfcd494510b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Windows_Core_Programming.cpp">
@@ -51,6 +54,12 @@
     <ClCompile Include="CHYThreadKernelObject.cpp">
       <Filter>HY_KernelObject</Filter>
     </ClCompile>
+    <ClCompile Include="CHYThreadSynchronizationInUserMode.cpp">
+      <Filter>HY_KernelObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYThreadMutex.cpp">
+      <Filter>HY_KernelObject\CHYThreadMutex</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h">
@@ -73,6 +82,12 @@
     </ClInclude>
     <ClInclude Include="CHYThreadKernelObject.h">
       <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYThreadSynchronizationInUserMode.h">
+      <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYThreadMutex.h">
+      <Filter>HY_KernelObject\CHYThreadMutex</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

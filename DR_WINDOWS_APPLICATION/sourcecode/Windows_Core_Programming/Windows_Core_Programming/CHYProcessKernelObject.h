@@ -292,6 +292,12 @@ namespace HY_KERNELOBJECT
 
 		// 获得进程的IO
 		BOOL GetProcessIoCounters(HANDLE hProcess, PIO_COUNTERS pIoCounters);
+
+		// 设置进程优先级
+		BOOL SetPriorityClass(HANDLE hProcess, DWORD fdwPriority);
+
+		// 获取进程优先级
+		DWORD GetPriorityClass(HANDLE hProcess);
 	};
 }
 

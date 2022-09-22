@@ -348,4 +348,14 @@ namespace HY_KERNELOBJECT
 	{
 		return ::GetProcessIoCounters(hProcess, pIoCounters);
 	}
+
+	BOOL CHYProcessKernelObject::SetPriorityClass(HANDLE hProcess, DWORD fdwPriority)
+	{
+		return ::SetPriorityClass(hProcess, fdwPriority);
+	}
+
+	DWORD CHYProcessKernelObject::GetPriorityClass(HANDLE hProcess)
+	{
+		return ::GetPriorityClass(hProcess);
+	}
 }

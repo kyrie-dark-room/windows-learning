@@ -150,6 +150,8 @@
     <ClCompile Include="CHYProcessKernelObject.cpp" />
     <ClCompile Include="CHYStringUtils.cpp" />
     <ClCompile Include="CHYThreadKernelObject.cpp" />
+    <ClCompile Include="CHYThreadMutex.cpp" />
+    <ClCompile Include="CHYThreadSynchronizationInUserMode.cpp" />
     <ClCompile Include="Windows_Core_Programming.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +162,8 @@
     <ClInclude Include="CHYProcessKernelObject.h" />
     <ClInclude Include="CHYStringUtils.h" />
     <ClInclude Include="CHYThreadKernelObject.h" />
+    <ClInclude Include="CHYThreadMutex.h" />
+    <ClInclude Include="CHYThreadSynchronizationInUserMode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
