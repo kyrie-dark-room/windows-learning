@@ -147,4 +147,24 @@ namespace HY_KERNELOBJECT
 
 		return iHighCacheLine;
 	}
+
+	BOOL CHYThreadSynchronizationInUserMode::SleepConditionVariableCS(PCONDITION_VARIABLE pConditionVariable, PCRITICAL_SECTION pCriticalSection, DWORD dwMilliseconds)
+	{
+		return ::SleepConditionVariableCS(pConditionVariable, pCriticalSection, dwMilliseconds);
+	}
+
+	BOOL CHYThreadSynchronizationInUserMode::SleepConditionVariableSRW(PCONDITION_VARIABLE pConditionVariable, PSRWLOCK pSRWLock, DWORD dwMilliseconds, ULONG Flags)
+	{
+		return ::SleepConditionVariableSRW(pConditionVariable, pSRWLock, dwMilliseconds, Flags);
+	}
+
+	VOID CHYThreadSynchronizationInUserMode::WakeConditionVariable(PCONDITION_VARIABLE ConditionVariable)
+	{
+		return ::WakeConditionVariable(ConditionVariable);
+	}
+
+	VOID CHYThreadSynchronizationInUserMode::WakeAllConditionVariable(PCONDITION_VARIABLE ConditionVariable)
+	{
+		return ::WakeAllConditionVariable(ConditionVariable);
+	}
 }

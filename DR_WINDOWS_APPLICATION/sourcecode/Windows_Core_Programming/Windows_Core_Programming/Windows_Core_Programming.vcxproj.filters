@@ -60,6 +60,9 @@
     <ClCompile Include="CHYThreadMutex.cpp">
       <Filter>HY_KernelObject\CHYThreadMutex</Filter>
     </ClCompile>
+    <ClCompile Include="CHYThreadSynchronizationInKernelMode.cpp">
+      <Filter>HY_KernelObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h">
@@ -88,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="CHYThreadMutex.h">
       <Filter>HY_KernelObject\CHYThreadMutex</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYThreadSynchronizationInKernelMode.h">
+      <Filter>HY_KernelObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

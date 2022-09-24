@@ -10,6 +10,7 @@
 
 namespace HY_KERNELOBJECT
 {
+	// 基于关键段的线程锁类
 	class CHYThreadMutex
 	{
 	public:
@@ -22,6 +23,37 @@ namespace HY_KERNELOBJECT
 
 	private:
 		CRITICAL_SECTION m_csThreadLocker;
+	};
+
+	// 基于带自旋锁关键段的线程锁类
+	class CHYThreadMutexEx
+	{
+	public:
+		CHYThreadMutexEx();
+		virtual ~CHYThreadMutexEx();
+
+		void Lock();
+		BOOL TryLock();
+		void Unlock();
+		DWORD SetSpinCount(DWORD dwSpinCount);
+
+	private:
+		CRITICAL_SECTION m_csThreadLocker;
+		DWORD m_dwSpinCount;
+	};
+
+	// 基于读写锁的线程锁
+	class CHYThreadSRWLock
+	{
+	public:
+		CHYThreadSRWLock();
+		virtual ~CHYThreadSRWLock();
+		void RLock();
+		void RUnLock();
+		void WLock();
+		void WUnlock();
+	private:
+		SRWLOCK m_sRWLock;
 	};
 }
 
