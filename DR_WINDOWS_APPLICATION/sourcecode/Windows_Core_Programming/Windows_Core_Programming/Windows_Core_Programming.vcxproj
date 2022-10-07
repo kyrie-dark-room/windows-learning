@@ -153,6 +153,7 @@
     <ClCompile Include="CHYThreadMutex.cpp" />
     <ClCompile Include="CHYThreadSynchronizationInKernelMode.cpp" />
     <ClCompile Include="CHYThreadSynchronizationInUserMode.cpp" />
+    <ClCompile Include="SyncAndAsynDeviceIO.cpp" />
     <ClCompile Include="Windows_Core_Programming.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +167,7 @@
     <ClInclude Include="CHYThreadMutex.h" />
     <ClInclude Include="CHYThreadSynchronizationInKernelMode.h" />
     <ClInclude Include="CHYThreadSynchronizationInUserMode.h" />
+    <ClInclude Include="SyncAndAsynDeviceIO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

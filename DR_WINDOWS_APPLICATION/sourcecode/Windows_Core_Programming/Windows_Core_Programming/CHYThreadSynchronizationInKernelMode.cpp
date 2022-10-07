@@ -121,4 +121,29 @@ namespace HY_KERNELOBJECT
 	{
 		return ::ReleaseMutex(hMutex);
 	}
+
+	DWORD CHYThreadSynchronizationInKernelMode::WaitForInputIdle(HANDLE hProcess, DWORD dwMilliseconds)
+	{
+		return ::WaitForInputIdle(hProcess, dwMilliseconds);
+	}
+
+	DWORD CHYThreadSynchronizationInKernelMode::MsgWaitForMultipleObjects(DWORD dwCount, PHANDLE phObjects, BOOL bWaitAll, DWORD dwMilliseconds, DWORD dwWakeMask)
+	{
+		return ::MsgWaitForMultipleObjects(dwCount, phObjects, bWaitAll, dwMilliseconds, dwWakeMask);
+	}
+
+	DWORD CHYThreadSynchronizationInKernelMode::MsgWaitForMultipleObjectsEx(DWORD dwCount, PHANDLE phObjects, DWORD dwMilliseconds, DWORD dwWakeMask, DWORD dwFlags)
+	{
+		return ::MsgWaitForMultipleObjectsEx(dwCount, phObjects, dwMilliseconds, dwWakeMask, dwFlags);
+	}
+
+	BOOL CHYThreadSynchronizationInKernelMode::WaitForDebugEvent(LPDEBUG_EVENT pde, DWORD dwMilliseconds)
+	{
+		return ::WaitForDebugEvent(pde, dwMilliseconds);
+	}
+
+	DWORD CHYThreadSynchronizationInKernelMode::SignalObjectAndWait(HANDLE hObjectToSignal, HANDLE hObjectToWaitOn, DWORD dwMilliseconds, BOOL bAlertable)
+	{
+		return ::SignalObjectAndWait(hObjectToSignal, hObjectToWaitOn, dwMilliseconds, bAlertable);
+	}
 }

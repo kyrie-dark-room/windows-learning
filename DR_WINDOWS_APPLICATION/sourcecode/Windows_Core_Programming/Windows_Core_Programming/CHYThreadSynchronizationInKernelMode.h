@@ -55,6 +55,7 @@
 	  然后其他等待互斥量的线程可以被调度，唯一不同的是，等待函数返回的不是通常的WAIT_OBJECT_0，而是返回一个特殊的值WAIT_ABANDONED。这个特殊的返回值（只适用于互斥量）表示线程
 	正在等待的互斥量为其他线程所占用，但该线程在完成对共享资源的使用之前终止了。这种情况有些尴尬。刚获得互斥量的线程并不知道资源目前处于什么状态--它可能已经被完全破坏了。在
 	这种情况下，我们的应用程序必须自己决定该怎么做。
+* 17）设备对象是可同步的内核对象，这意味着我们可以调用WaitForSingleObject，并传入文件句柄、套接字、通信端口，等等。
 */
 namespace HY_KERNELOBJECT
 {
@@ -111,6 +112,16 @@ namespace HY_KERNELOBJECT
 		// 释放互斥量
 		BOOL ReleaseMutex(HANDLE hMutex);
 
+		/******** 其他的线程同步函数 ********/
+		// 线程将自己挂起，等待由hProcess标识的进程，直到创建应用程序第一个窗口的线程中没有待处理的输入为止。
+		DWORD WaitForInputIdle(HANDLE hProcess, DWORD dwMilliseconds);
+		// 线程等待需要自己处理的消息
+		DWORD MsgWaitForMultipleObjects(DWORD dwCount, PHANDLE phObjects, BOOL bWaitAll, DWORD dwMilliseconds, DWORD dwWakeMask);
+		DWORD MsgWaitForMultipleObjectsEx(DWORD dwCount, PHANDLE phObjects, DWORD dwMilliseconds, DWORD dwWakeMask, DWORD dwFlags);
+		// 调试器等待调试事件
+		BOOL WaitForDebugEvent(LPDEBUG_EVENT pde, DWORD dwMilliseconds);
+		// 通过一个原子操作来触发一个内核对象并等待另一个内核对象。
+		DWORD SignalObjectAndWait(HANDLE hObjectToSignal, HANDLE hObjectToWaitOn, DWORD dwMilliseconds, BOOL bAlertable);
 	private:
 
 	};
