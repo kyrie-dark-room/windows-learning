@@ -151,6 +151,7 @@
     <ClCompile Include="CHYStringUtils.cpp" />
     <ClCompile Include="CHYThreadKernelObject.cpp" />
     <ClCompile Include="CHYThreadMutex.cpp" />
+    <ClCompile Include="CHYThreadPool.cpp" />
     <ClCompile Include="CHYThreadSynchronizationInKernelMode.cpp" />
     <ClCompile Include="CHYThreadSynchronizationInUserMode.cpp" />
     <ClCompile Include="SyncAndAsynDeviceIO.cpp" />
@@ -165,6 +166,7 @@
     <ClInclude Include="CHYStringUtils.h" />
     <ClInclude Include="CHYThreadKernelObject.h" />
     <ClInclude Include="CHYThreadMutex.h" />
+    <ClInclude Include="CHYThreadPool.h" />
     <ClInclude Include="CHYThreadSynchronizationInKernelMode.h" />
     <ClInclude Include="CHYThreadSynchronizationInUserMode.h" />
     <ClInclude Include="SyncAndAsynDeviceIO.h" />

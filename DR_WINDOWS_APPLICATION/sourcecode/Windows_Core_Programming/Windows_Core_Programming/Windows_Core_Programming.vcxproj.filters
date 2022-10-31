@@ -66,6 +66,9 @@
     <ClCompile Include="SyncAndAsynDeviceIO.cpp">
       <Filter>HY_KernelObject</Filter>
     </ClCompile>
+    <ClCompile Include="CHYThreadPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h">
@@ -100,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="SyncAndAsynDeviceIO.h">
       <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYThreadPool.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

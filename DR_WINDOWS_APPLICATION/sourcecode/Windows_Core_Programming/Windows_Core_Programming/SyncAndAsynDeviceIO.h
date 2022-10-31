@@ -164,6 +164,105 @@
 *		Windows提供了一个函数，允许我们手动将一项添加到APC队列中：
 *			DWORD QueueUserAPC(PAPCFUNC pfnAPC, HANDLE hThread, ULONG_PTR dwData);
 *		我们可以使用QueueUserAPC来进行非常高效的线程间通信，甚至能够跨越进程的界限。
+* 18）I/O完成端口
+*	  回顾历史，我们能够采用以下两种模型之一来架构一个服务应用程序。
+*		·串行模型（serial model）：一个线程等待一个客户（通常是通过网络）发出请求。当请求到达的时候，线程会被唤醒并对客户请求进行处理。
+*		·并发模型（concurrent model）：一个线程等待一个客户请求，并创建一个新的线程来处理请求。当新线程正在处理客户请求的时候，原来的线程会进入下一次循环并等待另一个客户请求。
+*	    当处理客户请求的线程完成整个处理过程的时候，该线程就会终止。
+* 19）I/O完成端口背后的理论是并发运行的线程的数量必须有一个上限--也就是说，同时发出的500个客户请求不应该允许出现500个可运行的线程。这是并发模型的一个潜在缺点。
+* 20）并发模型的另一个缺点是需要为每个客户请求创建一个新的线程。I/O完成端口的设计初衷就是与线程池配合使用。
+* 21）I/O完成端口可能是最复杂的内核对象了。为了创建一个I/O完成端口，我们应该调用CreateIoCompletionPort：
+*		HANDLE CreateIoCompletionPort(
+			HANDLE hFile,
+			HANDLE hExistingCompletionPort,
+			ULONG_PTR CompletionKey,
+			DWORD dwNumberOfConcurrentThreads);
+	  这个函数执行两项不同的任务：它不仅会创建一个I/O完成端口，而且会将一个设备与一个I/O端口关联起来。依我之见，该函数已经太复杂了，Microsoft应该将它分成两个单独的函数。
+	  i. 创建I/O完成端口:
+	     HANDLE CreateIoCompletionPort(DWORD dwNumberOfConcurrentThreads)
+		 {
+			return (CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, dwNumberOfConcurrentThreads));
+		 }
+		 我们不需要传递一个SECURITY_ATTRIBUTES结构给CreateIoCompletionPort，在所有用来创建内核对象的Windows函数中，CreateIoCompletionPort大概是绝无仅有的。这是因为I/O完成端口
+	    的设计初衷就是只在一个进程中使用。
+	  ii.将设备与I/O完成端口关联起来。
+	    BOOL AssociateDeviceWithCompletionPort(HANDLE hCompletionPort, HANDLE hDevice, DWORD dwCompletionKey)
+		{
+			HANDLE h = CreateIoCompletionPort(hDevice, hCompetionPort, dwCompletionKey, 0);
+			return (h == hCompletionPort);
+		}
+		完成键（即Complete key，一个对我们有意义的值，操作系统并不关心我们在这里传入的到底是什么值。）
+* 22）当我们创建一个I/O完成端口的时候，系统内核实际上会创建5个不同的数据结构，“.\\Structs_Of_IO_Completion_Port\\IO完成端口的内部运作.jpg”。
+*	  第二个数据结构是一个I/O完成队列。当设备的一个异步I/O请求完成的时候，系统会检查设备是否与一个I/O完成端口相关联，如果设备与一个I/O完成端口相关联，那么系统会将该项已完成的I/O请求
+*   追加到I/O完成端口的I/O完成队列的末尾。
+*     说明：向设备发出I/O请求，但不把该项已完成的I/O请求添加到I/O完成端口的队列中也是有可能的。通常我们并不需要这样做，但这样做偶尔还是有用的--比如，我们通过一个套接字发送数据，但并
+*   不关心数据实际上到底有没有送达。
+*     为了发出一个在完成的时候不要被添加到队列中的I/O请求，我们必须在OVERLAPPED结构的hEvent成员中保存一个有效的事件句柄，并将它与1按位或起来，如下面的代码所示：
+*		Overlapped.hEvent = CreateEvent(NULL, TRUE, FALSE，NULL);
+*		Overlapped.hEvent = (HANDLE)((DWORD_PTR) Overlapped.hEvent | 1);
+*		ReadFile(..., &Overlapped);
+*   另外，在关闭这个事件句柄的时候，不要忘了将最低位清掉：
+*		CloseHandle((HANDLE) ((DWORD_PTR) Overlapped.hEvent & ~1));
+* 23）I/O完成端口的周边架构
+*	  当我们的服务应用程序初始化的时候，应该调用CreateNewCompletionPort之类的函数来创建I/O完成端口。应用程序接着应该创建一个线程池来处理客户请求。关于线程池中应该有多少线程？
+	就目前而言，标准的经验法则是取主机的CPU数量并将其乘以2。
+	  线程池中的所有线程应该执行同一个函数。一般来说，这个线程函数会先进性一些初始化工作，然后进入一个循环，当服务进程被告知要停止的时候，这个循环也应该就此终止。在循环内部，
+	线程将自己切换到睡眠状态，来等待设备I/O请求完成并进入完成端口。调用GetQueuedCompletionStatus可以达到这一目的：
+		BOOL GetQueuedCompletionStatus(
+				HANDLE		hCompletionPort,
+				PDWORD		pdwNumberOfBytesTransferred,
+				PULONG_PTR	pCompletionKey,
+				OVERLAPPED**	ppOverlapped,
+				DWORD		dwMilliseconds);
+	  确定GetQueuedCompletionStatus返回的原因有些困难，下面这段代码展示了正确的做法：
+		DWORD dwNumBytes;
+		ULONG_PTR CompletionKey;
+		OVERLAPPED* pOverlapped;
+
+		// hIOCP is initialized somewhere else in the program
+		BOOL bOk = GetQueuedCompletionStatus(hIOCP, &dwNumBytes, &CompletionKey, &pOverlapped, 1000);
+		DWORD dwError = GetLastError();
+		if (bOk){
+			// Process a successfully completed I/O request
+		}
+		else{
+			if (pOverlapped != NULL)
+			{
+				// Process a failed completed I/O request
+				// dwError contains the reason for failure
+			}
+			else
+			{
+				if (dwError == WAIT_TIMEOUT)
+				{
+					// Time-out while waiting for completed I/O entry
+				}
+				else
+				{
+					// Bad call to GetQueuedCompletionStatus
+					// dwError contains the reason for the bad call
+				}
+			}
+		}
+	  在Windows Vista中，如果预计会不断地接收到大量的I/O请求，那么我们可以调用下面的函数来同时取得多个I/O请求的结果，而不必让许多线程等待完成端口，从而可以避免由此产生的上下文
+	切换所带来的开销：
+	  BOOL GetQueuedCompletionStatusEx(
+			HANDLE hCompletionPort,
+			LPOVERLAPPED_ENTRY pCompletionPortEntries,
+			ULONG ulCount,
+			PULONG pulNumEntriesRemoved,
+			DWORD dwMilliseconds,
+			BOOL bAlertable);
+* 24）我们可以通过以下3种方式之一来结束线程/完成端口的指派：
+*	  ·让线程退出。
+*	  ·让线程调用GetQueuedCompletionStatus，并传入另一个不同的I/O完成端口的句柄。
+*	  ·销毁线程当前被指派的I/O完成端口。
+* 25）总结下：假设我们在一台有两个CPU的机器上运行。我们创建了一个同时最多只允许两个线程被唤醒的完成端口，还创建了4个线程来等待已完成的I/O请求。如果3个已完成的I/O请求被添加到端口的队列中，
+*	只有两个线程被唤醒来对请求进行处理，这降低了可运行线程的数量，并节省了上下文切换的时间。现在，如果一个可运行线程调用了Sleep，WaitForSingleObject，WaitForMultipleObjects，
+	SignalObjectAndWait，一个异步I/O调用或任何能够导致线程变成不可运行状态的函数，I/O完成端口会检测到这一情况并立即唤醒第3个线程。完成端口的目标是使CPU保持在满负荷状态下工作。
+	  最后，第一个线程将再次变成可运行状态。当发生这种情况的时候，可运行线程的数量将超过系统中CPU的数量。但是，完成端口仍然知道这一点，在线程数量降到低于CPU数量之前，它是不会再唤醒任何
+	线程的。I/O完成端口体系结构假定可运行线程的数量只会在很短一段时间内高于最大允许的线程数量，一旦线程进入下一次循环并调用GetQueuedCompletionStatus，可运行线程的数量就会迅速下降。这就
+	解释了为什么线程池中的线程数量应该大于在完成端口中设置的并发线程数量。
 */
 namespace HY_KERNELOBJECT
 {
