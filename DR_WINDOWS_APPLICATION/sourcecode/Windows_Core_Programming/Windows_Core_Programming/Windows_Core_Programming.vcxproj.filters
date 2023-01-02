@@ -28,6 +28,9 @@
     <Filter Include="HY_KernelObject\CHYThreadMutex">
       <UniqueIdentifier>{138a0f45-8875-4594-95f5-8bfcd494510b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_MemoryObject">
+      <UniqueIdentifier>{b5308afc-6716-46f4-a0e1-4d7cb54dc42a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Windows_Core_Programming.cpp">
@@ -67,7 +70,25 @@
       <Filter>HY_KernelObject</Filter>
     </ClCompile>
     <ClCompile Include="CHYThreadPool.cpp">
-      <Filter>源文件</Filter>
+      <Filter>HY_KernelObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYFiber.cpp">
+      <Filter>HY_KernelObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYMemoryObject.cpp">
+      <Filter>HY_MemoryObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYVirtualMemory.cpp">
+      <Filter>HY_MemoryObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYThreadStack.cpp">
+      <Filter>HY_MemoryObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYMemoryMappedFile.cpp">
+      <Filter>HY_MemoryObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CHYHeap.cpp">
+      <Filter>HY_MemoryObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -105,7 +126,25 @@
       <Filter>HY_KernelObject</Filter>
     </ClInclude>
     <ClInclude Include="CHYThreadPool.h">
-      <Filter>头文件</Filter>
+      <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYFiber.h">
+      <Filter>HY_KernelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYMemoryObject.h">
+      <Filter>HY_MemoryObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYVirtualMemory.h">
+      <Filter>HY_MemoryObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYThreadStack.h">
+      <Filter>HY_MemoryObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYMemoryMappedFile.h">
+      <Filter>HY_MemoryObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYHeap.h">
+      <Filter>HY_MemoryObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
