@@ -31,6 +31,9 @@
     <Filter Include="HY_MemoryObject">
       <UniqueIdentifier>{b5308afc-6716-46f4-a0e1-4d7cb54dc42a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_DLL_Manager">
+      <UniqueIdentifier>{771c3995-acb9-493a-b81a-f5e530784791}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Windows_Core_Programming.cpp">
@@ -90,6 +93,9 @@
     <ClCompile Include="CHYHeap.cpp">
       <Filter>HY_MemoryObject</Filter>
     </ClCompile>
+    <ClCompile Include="CHYLibraryLoader.cpp">
+      <Filter>HY_DLL_Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h">
@@ -145,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="CHYHeap.h">
       <Filter>HY_MemoryObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYLibraryLoader.h">
+      <Filter>HY_DLL_Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
