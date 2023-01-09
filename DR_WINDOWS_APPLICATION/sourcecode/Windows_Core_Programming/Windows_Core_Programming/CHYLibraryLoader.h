@@ -113,6 +113,16 @@ namespace HY_DLL_Manager
 			PIMAGEHLP_STATUS_ROUTINE StatusRoutine
 		);
 
+		// 要使用动态TLS，我们必须先调用TlsAlloc，这个函数让系统对进程中的位标志进行检索并找到一个FREE标志。然后系统会将该标志从FREE改为INUSE并让TlsAlloc返回该标志在位数组中的索引。
+		DWORD TlsAlloc();
+		// 当系统创建一个线程的时候，会分配TLS_MINIMUM_AVAILABLE个PVOID值，将它们都初始化为0，并与线程关联起来。每个线程都有自己的PVOID数组，数组中的每个PVOID可以保存任意值。
+		// 为了把一个值放到线程的数组中，我们应该调用
+		BOOL TlsSetValue(DWORD dwTlsIndex, PVOID pvTlsValue);
+		// 为了从线程的数组中取回一个值，我们应该调用
+		PVOID TlsGetValue(DWORD dwTlsIndex);
+		// 当我们不再需要一个已经预定的TLS元素时，应该调用TlsFree
+		BOOL TlsFree(DWORD dwTlsIndex);
+
 	private:
 		CHYLibraryLoader(const CHYLibraryLoader&) = delete;
 		CHYLibraryLoader& operator=(const CHYLibraryLoader&) = delete;

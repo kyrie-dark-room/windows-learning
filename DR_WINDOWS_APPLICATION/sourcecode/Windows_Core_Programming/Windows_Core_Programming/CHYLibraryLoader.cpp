@@ -99,4 +99,24 @@ namespace HY_DLL_Manager
 	{
 		return ::BindImageEx(Flags, ImageName, DllPath, SymbolPath, StatusRoutine);
 	}
+
+	DWORD CHYLibraryLoader::TlsAlloc()
+	{
+		return ::TlsAlloc();
+	}
+
+	BOOL CHYLibraryLoader::TlsSetValue(DWORD dwTlsIndex, PVOID pvTlsValue)
+	{
+		return ::TlsSetValue(dwTlsIndex, pvTlsValue);
+	}
+
+	PVOID CHYLibraryLoader::TlsGetValue(DWORD dwTlsIndex)
+	{
+		return ::TlsGetValue(dwTlsIndex);
+	}
+
+	BOOL CHYLibraryLoader::TlsFree(DWORD dwTlsIndex)
+	{
+		return ::TlsFree(dwTlsIndex);
+	}
 }
