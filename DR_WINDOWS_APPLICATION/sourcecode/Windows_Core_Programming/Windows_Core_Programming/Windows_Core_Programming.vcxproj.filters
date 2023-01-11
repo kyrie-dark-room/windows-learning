@@ -34,6 +34,9 @@
     <Filter Include="HY_DLL_Manager">
       <UniqueIdentifier>{771c3995-acb9-493a-b81a-f5e530784791}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_HOOK">
+      <UniqueIdentifier>{f2f9d7da-f7b7-4be8-b08b-b39182e242f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Windows_Core_Programming.cpp">
@@ -96,6 +99,9 @@
     <ClCompile Include="CHYLibraryLoader.cpp">
       <Filter>HY_DLL_Manager</Filter>
     </ClCompile>
+    <ClCompile Include="CHYHOOK.cpp">
+      <Filter>HY_HOOK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h">
@@ -154,6 +160,9 @@
     </ClInclude>
     <ClInclude Include="CHYLibraryLoader.h">
       <Filter>HY_DLL_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYHOOK.h">
+      <Filter>HY_HOOK</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
