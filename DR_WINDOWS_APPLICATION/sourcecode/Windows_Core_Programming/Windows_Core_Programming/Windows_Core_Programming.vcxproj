@@ -154,6 +154,7 @@
     <ClCompile Include="CHYMemoryMappedFile.cpp" />
     <ClCompile Include="CHYMemoryObject.cpp" />
     <ClCompile Include="CHYProcessKernelObject.cpp" />
+    <ClCompile Include="CHYSEG.cpp" />
     <ClCompile Include="CHYStringUtils.cpp" />
     <ClCompile Include="CHYThreadKernelObject.cpp" />
     <ClCompile Include="CHYThreadMutex.cpp" />
@@ -177,6 +178,7 @@
     <ClInclude Include="CHYMemoryMappedFile.h" />
     <ClInclude Include="CHYMemoryObject.h" />
     <ClInclude Include="CHYProcessKernelObject.h" />
+    <ClInclude Include="CHYSEG.h" />
     <ClInclude Include="CHYStringUtils.h" />
     <ClInclude Include="CHYThreadKernelObject.h" />
     <ClInclude Include="CHYThreadMutex.h" />

@@ -37,6 +37,9 @@
     <Filter Include="HY_HOOK">
       <UniqueIdentifier>{f2f9d7da-f7b7-4be8-b08b-b39182e242f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HY_SEH">
+      <UniqueIdentifier>{9288d345-dc3a-422e-b827-323a0d2a6849}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Windows_Core_Programming.cpp">
@@ -102,6 +105,9 @@
     <ClCompile Include="CHYHOOK.cpp">
       <Filter>HY_HOOK</Filter>
     </ClCompile>
+    <ClCompile Include="CHYSEG.cpp">
+      <Filter>HY_SEH</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHYErrorHandler.h">
@@ -163,6 +169,9 @@
     </ClInclude>
     <ClInclude Include="CHYHOOK.h">
       <Filter>HY_HOOK</Filter>
+    </ClInclude>
+    <ClInclude Include="CHYSEG.h">
+      <Filter>HY_SEH</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
